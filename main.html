@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Upwork job solution</title>
+
+	<!-- Main styles -->
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="row text-center">
+			<div class="item-container">
+				<div class="item item--bumper">
+					<a href="#!" class="">
+						<img class="img-responsive" src='images/bumper.jpeg'></img>
+					</a>
+					<!-- bumper line -->
+					<svg class="line line--bumper">
+					  <polyline points="2,0 380,400" style="fill:none;stroke:#2980b9;stroke-width:4" />
+					  Sorry, your browser does not support inline SVG.
+					</svg>
+					<!-- bumper line ./edn-->
+				</div>
+
+				<div class="item item--mirror">
+					<a href="#!" class="">
+						<img class="img-responsive" src='images/mirror.jpg'></img>
+					</a>
+					<!-- mirror line -->
+					<svg class="line line--mirror">
+					  <polyline points="2,0 188,400" style="fill:none;stroke:#2980b9;stroke-width:4" />
+					  Sorry, your browser does not support inline SVG.
+					</svg>
+					<!-- mirror line ./edn-->
+				</div>
+				
+				<div class="item item--wheel">
+					<a href="#!" class="">
+						<img class="img-responsive" src='images/tire.jpg'></img>
+					</a>
+					<!-- wheel line -->
+					<svg class="line line--wheel">
+					  <polyline points="190,0 0,358" style="fill:none;stroke:#2980b9;stroke-width:4" />
+					  Sorry, your browser does not support inline SVG.
+					</svg>
+					<!-- wheel line ./edn-->
+				</div>				
+			</div>
+
+
+			<div class="main-image">
+				<img class="img-responsive" id="main-clean" src="images/main.jpg" alt=""/>
+				<img class="img-responsive main-image__state" id="main-bumper" src="images/main-bumper.jpg" alt=""/>
+				<img class="img-responsive main-image__state" id="main-mirror" src="images/main-mirror.jpg" alt=""/>
+				<img class="img-responsive main-image__state" id="main-wheel" src="images/main-tire.jpg" alt=""/>
+				
+				<!-- Bumper -->
+				<a href="#!" class="main-image__bumper" data-target="bumper"></a>
+				<!-- Mirror -->
+				<a href="#!" class="main-image__mirror" data-target="mirror"></a>
+				<!-- Wheel -->
+				<a href="#!" class="main-image__wheel" data-target="wheel"></a>
+			</div>
+			<!-- Maps -->
+			<!-- <map name="main-image-map" id="ImageMapsCom-image-maps-2016-12-22-010514">
+				<area data-target="mirror" alt="" title="" href="http://www.image-maps.com/" shape="rect" coords="831,99,918,149" style="outline:none;" target="_self" class="mirror" id="area-mirror"/>
+				<area data-target="wheel"  alt="" title="" href="http://www.image-maps.com/" shape="rect" coords="938,235,1038,404" style="outline:none;" target="_self"  class="tire" id="area-tire"  />
+				<area data-target="bumper" alt="" title="" href="http://www.image-maps.com/" shape="poly" coords="162,243,159,385,715,397,741,226" style="outline:none;" target="_self" class="bumper" id="area-bumper"/>
+			</map>
+ -->
+		</div>
+	</div>
+</body>
+</html>
+
+<script src="js/jquery.js"></script>
+<script src="js/script.js"></script>
+
+

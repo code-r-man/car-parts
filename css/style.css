@@ -1,0 +1,412 @@
+/*---------------------------------------*\
+	Nikola Jovanovic, 2017 - coderman.tk
+\*---------------------------------------*/
+
+body {
+	font-family: Arial;
+	min-width: 320px;
+}
+
+body * {
+	box-sizing: border-box;
+}
+
+.container {
+  padding: 0 15px;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.img-responsive {
+	display: block;
+	max-width: 100%;
+}
+
+.text-center {
+	text-align: center;
+}
+
+a {
+	outline: none;
+	color: #2980b9;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+.heading {
+	position: relative;
+	z-index: 1500;
+}
+
+
+/*------------------------------------*\
+	#ITEMS
+\*------------------------------------*/
+
+.item {
+	display: inline-block;
+	transition: opacity .35s ease-in;
+	position: relative;
+	vertical-align: top;
+	width: 33.33%;
+	/*z-index: -1;*/
+	margin-left: -4px;
+}
+
+.item:first-child {
+	text-align: left;
+}
+
+
+.item a {
+	display: inline-block;
+}
+
+.item.show {
+	z-index: 1000;
+}
+
+
+.item:after {
+	display: block;
+	content: '';
+	background-color:#2980B9;
+	height: 4px;
+	width: 0;
+	position: absolute;
+	left: 50%;
+	top: 100%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	transition: width .2s;
+}
+
+@media (max-width: 767px) {
+	.item:after {
+		display: none;
+	}
+}
+
+.item.show:after {
+	width: 60px;
+	transition: width .2s;
+	transition-delay: .5s;
+}
+
+.item.lock:after {
+	width: 60px;
+	transition: width .2s;
+	transition-delay: .5s;
+}
+
+
+.item img {
+	transition: all .35s ease-in;
+	-webkit-transform: scale(0);
+	-ms-transform: scale(0);
+	-o-transform: scale(0);
+	transform: scale(0);
+	transform-origin: 50% 100%;
+}
+
+.item.show img {
+	transition-delay: .55s;
+	-webkit-transform: scale(1);
+	-ms-transform: scale(1);
+	-o-transform: scale(1);
+	transform: scale(1);
+}
+
+.item.lock img {
+	transition-delay: .85s;
+	-webkit-transform: scale(1);
+	-ms-transform: scale(1);
+	-o-transform: scale(1);
+	transform: scale(1);
+}
+
+.item.show .line {
+	stroke-dashoffset: 0;
+	transition-delay: none;
+}
+
+.item.lock .line {
+	stroke-dashoffset: 0;
+	transition-delay: none;
+}
+
+@media (max-width: 1700px) {
+	.item {
+		margin-left: -4px;
+	}
+
+	.item--bumper {
+
+	}
+
+	.item--mirror {
+		
+	}
+
+	.item--wheel {
+
+	}
+}
+
+@media (max-width: 1200px) {
+	.item--wheel img {
+		max-width: 240px;
+	}
+}
+
+@media (max-width: 768px) {
+	.item--wheel img {
+		max-width: 180px;
+	}
+}
+
+@media (max-width: 767px) {
+	.item-container {
+		position: relative;
+	}
+
+	.item {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		-webkit-transform: translate(-50%,-50%);
+		-ms-transform: translate(-50%,-50%);
+		-o-transform: translate(-50%,-50%);
+		transform: translate(-50%,-50%);
+		width: auto;
+	}
+}
+
+@media (max-width: 480px) {
+	.item {
+		width: 100%;
+		max-width: 290px;
+	}
+}
+
+/*------------------------------------*\
+	#MAIN-IMAGE
+\*------------------------------------*/
+
+.main-image {
+	position: relative;
+	display: inline-block;
+	z-index: 2000;
+	margin-top: 60px;
+}
+
+.main-image a {
+	z-index: 2110;
+}
+
+
+.main-image > img {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 926px;
+	width: 100%;
+}
+
+.main-image__state {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+
+
+@media (max-width: 1590px) {
+	.main-image > img {
+		max-width: 680px;
+	}
+}
+
+@media (max-width: 1200px) {
+	.main-image > img {
+		max-width: 500px;
+	}
+}
+
+	.main-image__bumper {
+		position: absolute;
+		left: 22px;
+		bottom: 77px;
+		opacity: .5;
+		width: 575px;
+		height: 160px;
+	}
+
+
+	.main-image__mirror {
+		position: absolute;
+		left: 697px;
+		bottom: 333px;
+		width: 100px;
+		height: 64px;
+	}
+
+	.main-image__wheel {
+		position: absolute;
+		left: 822px;
+		bottom: 70px;
+		height: 164px;
+		width: 88px;
+	}
+
+	.main-image__state {
+		opacity: 0;
+	}
+
+	.main-image__state.show {
+		opacity: 1;
+		z-index: 2100;
+
+	}
+
+	.main-image__state.lock{
+		opacity: 1;
+		z-index: 2090;
+	}
+
+	@media (max-width: 1590px) {
+		.main-image__bumper {
+			width: 415px;
+			bottom: 59px;
+			height: 109px;
+		}
+
+		.main-image__mirror {
+			left: 516px;
+			bottom: 244px;
+			width: 63px;
+			height: 35px;
+		}
+
+		.main-image__wheel {
+			left: 611px;
+			bottom: 53px;
+			height: 118px;
+			width: 53px;
+		}
+	}
+
+	@media (max-width: 1200px) {
+		.main-image__bumper {
+			width: 298px;
+			bottom: 39px;
+			height: 91px;
+			left: 15px;
+		}
+
+		.main-image__mirror {
+			left: 379px;
+			bottom: 169px;
+			width: 45px;
+			height: 35px;
+		}
+
+		.main-image__wheel {
+			left: 443px;
+			bottom: 38px;
+			height: 91px;
+			width: 44px;
+		}
+	}
+
+	@media (max-width: 550px) {
+		.main-image__bumper {
+			width: 60%;
+			bottom: calc(100vw * 0.09);
+			height: calc(100vw * 0.15);
+			left: 15px;
+		}
+
+		.main-image__mirror {
+			left: 76%;
+			bottom: calc(100vw * 0.30);
+			width: 8%;
+			height: calc(100vw * 0.07);
+		}
+
+		.main-image__wheel {
+			left: 89%;
+			bottom: calc(100vw * 0.07);
+			height: calc(100vw * 0.15);
+			width: 10%;
+		}
+	}
+
+/*------------------------------------*\
+	#LINES
+\*------------------------------------*/
+
+.line {
+	position: absolute;
+	stroke-dasharray: 600;
+	stroke-dashoffset: -600;
+	transition: stroke-dashoffset .45s ease-in;
+	z-index: 1000;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	overflow: visible;
+}
+
+.line--bumper {
+}
+
+.line--mirror {
+}
+
+.line--wheel {
+	left: auto;
+	right: 0;
+}
+
+@media (max-width: 992px) {
+	.line--wheel {
+		-webkit-transform: translateX(20%);
+		-ms-transform: translateX(20%);
+		-o-transform: translateX(20%);
+		transform: translateX(20%);
+	}
+
+	.line--bumper {
+		-webkit-transform: translateX(-20%);
+		-ms-transform: translateX(-20%);
+		-o-transform: translateX(-20%);
+		transform: translateX(-20%);
+	}
+
+	.item--wheel:after {
+		left: 70%;
+	}
+
+	.item--bumper:after {
+		left: 30%;
+	}
+}
+
+@media (max-width: 767px) {
+	.line {
+		display: none;
+	}
+}
+
+/*------------------------------------*\
+	#AREAS
+\*------------------------------------*/
+
+area {
+	position: relative;
+	z-index: 1010;
+}
