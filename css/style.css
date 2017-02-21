@@ -17,6 +17,13 @@ body * {
   margin: 0 auto;
 }
 
+.iframe {
+	border: none !important;
+	overflow: visible;
+	height: 690px;
+	width: 100%;
+}
+
 .img-responsive {
 	display: block;
 	max-width: 100%;
